@@ -1,0 +1,158 @@
+
+body {
+  font-family: 'Georgia', serif;
+  margin: 0;
+  padding: 0;
+  background-color: #eee5d9; /* Bege claro como fundo principal */
+  padding-top: 80px; /* Espaço para o header absoluto */
+}
+
+.main-header {
+  width: 100%;
+  padding: 20px 40px;
+  background-color: #000;
+  background: linear-gradient(to right, #000, #d2b68a);
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  box-sizing: border-box;
+  z-index: 1000;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.5);
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  user-select: none;
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  margin-left: 20px;
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #ccc;
+  cursor: pointer;
+}
+
+/* Main container */
+main {
+  max-width: 1200px;
+  margin: 0 auto 60px;
+  padding: 20px;
+  background-color: #f9f6f0; /* Bege muito claro */
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(210, 182, 138, 0.3);
+}
+
+/* Section Titles */
+h2 {
+  color: #000000; /* Marrom escuro para contraste suave */
+  text-align: center;
+  font-size: 2.2rem;
+  margin-bottom: 30px;
+  letter-spacing: 1.5px;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-family: 'Georgia', serif;
+}
+
+/* Trends Grid */
+.trends-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+  margin-bottom: 50px;
+}
+
+.trend-card {
+  background-color: #f9f6f0;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.trend-card img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+  display: block;
+}
+
+.trend-card h3 {
+  color: #000000; /* Marrom médio */
+  font-size: 1.4rem;
+  margin: 15px 20px 8px;
+  font-family: 'Georgia', serif;
+}
+
+.trend-card p {
+  color: #6b5e3c; /* Marrom claro */
+  font-size: 1rem;
+  margin: 0 20px 20px;
+  font-family: 'Georgia', serif;
+}
+
+/* Tips Section */
+.tips {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 25px;
+  margin-bottom: 40px;
+}
+
+.tip {
+  background-color: #f9f6f0;
+  border-radius: 14px;
+  padding: 25px 20px;
+  max-width: 280px;
+  text-align: center;
+  transition: box-shadow 0.3s ease;
+  font-family: 'Georgia', serif;
+}
+
+
+.tip h3 {
+  color: #000000;
+  font-size: 1.3rem;
+  margin-bottom: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.tip p {
+  color: #6b5e3c;
+  font-size: 1rem;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .main-header {
+    flex-direction: column;
+    padding: 15px 20px;
+  }
+  .nav-links {
+    margin-top: 10px;
+  }
+  .nav-links a {
+    margin-left: 0;
+    margin-right: 15px;
+    font-size: 18px;
+  }
+  .tips {
+    flex-direction: column;
+    align-items: center;
+  }
+}
