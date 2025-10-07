@@ -70,7 +70,7 @@ document.addEventListener("DOMContentLoaded", async function () {
   const sliders = document.querySelectorAll(".slider");
 
   // 🔥 Buscar imagens do backend
-  const res = await fetch("http://localhost:3000/listar-imagens");
+  const res = await fetch("https://allwearback00.vercel.app/listar-imagens");
   const imagens = await res.json();
 
   // Preencher o primeiro slider com imagens do backend
@@ -98,7 +98,7 @@ form.addEventListener("submit", async (e) => {
 
   const formData = new FormData(form);
 
-  const res = await fetch("http://localhost:3000/upload", {
+  const res = await fetch("https://allwearback00.vercel.app/upload", {
     method: "POST",
     body: formData
   });

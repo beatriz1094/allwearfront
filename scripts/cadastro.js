@@ -7,7 +7,7 @@ document.getElementById("cadastroForm").addEventListener("submit", async (e) => 
   const telefone = document.getElementById("telefone").value;
 
   try {
-    const response = await fetch("http://localhost:3000/usuario", {
+    const response = await fetch("https://allwearback00.vercel.app/usuario", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ nome, email, telefone,senha }),
