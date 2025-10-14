@@ -84,10 +84,10 @@ h2 {
 
 .trend-card img {
   width: 100%;
-  max-width: 100%;
-  height: auto;
-  object-fit: cover;
+  height: 400px; /* altura fixa para todas as imagens */
+  object-fit: cover; /* mantém o enquadramento bonito sem distorcer */
   display: block;
+  border-bottom: 2px solid #d2b68a; /* opcional: detalhe elegante */
 }
 
 .trend-card h3 {
