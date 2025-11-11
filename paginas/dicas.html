@@ -1,14 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Style Tips</title>
-  <link rel="stylesheet" href="../styles/dica.css" />
+  <link rel="stylesheet" href="dica.css" />
 </head>
 <body>
-  <header>
-    <h1>Style Tips</h1>
+  <!-- Navbar fixa -->
+  <header class="navbar">
+    <div class="logo">Style Tips</div>
     <nav>
       <ul>
         <li><a href="fashion.html">Fashion</a></li>
@@ -19,39 +20,52 @@
     </nav>
   </header>
 
+  <!-- Hero com imagem de fundo -->
+  <section class="hero">
+    <div class="hero-text">
+      <h1>Bem-vinda ao All Wear</h1>
+      <p>Dicas elegantes de moda, cuidados e estilo de vida</p>
+    </div>
+  </section>
+
+  <!-- Cards -->
   <main>
-    <section class="tip">
-      <img src="https://i.pinimg.com/736x/d9/7d/d2/d97dd2d0f35a16c90adea4089ff9c31c.jpg" alt="Fashion Look">
-      <div class="info">
-        <h2>Fashion</h2>
-        <p>Esta com duivida de que roupa usar para cada ocasião do seu dia?Vamos te ajudar com dicas modernas e elegantes de roupas para usar no seu dia a dia!</p>
-        
-      </div>
+    <section class="card">
+        <img src="https://i.pinimg.com/1200x/e2/69/c3/e269c33173eaf691bbae3d46fc79ff89.jpg" alt="Moda elegante" />
+        <div class="text">
+            <h2>Fashion</h2>
+            <p>Dicas modernas e elegantes para o seu guarda-roupa do dia a dia.</p>
+        </div>
     </section>
 
-    <section class="tip">
-      <img src="https://i.pinimg.com/736x/b2/e1/d3/b2e1d3ce241cf2a0253cbe74dd79661b.jpg" alt="Skin Care">
-      <div class="info">
-        <h2>Skin Care</h2>
-        <p>Não sabe como iniciar uma rotina de cuidados com sua pele? Vamos te ajudar indicando produtos ideais para sua pele!</p>
-      </div>
+    <section class="card">
+        <img src="https://i.pinimg.com/736x/a5/99/ac/a599acc99b9f08de0ecccbdce869a9c8.jpg" alt="Skincare" />
+        <div class="text">
+            <h2>Skin Care</h2>
+            <p>Rotinas de cuidados e recomendações para uma pele radiante.</p>
+        </div>
     </section>
 
-    <section class="tip">
-      <img src="https://i.pinimg.com/736x/8b/02/66/8b0266a8b7a0deaa2ebbfcf1f3f31192.jpg" alt="Nail Care">
-      <div class="info">
-        <h2>Desenvolvimento Pessoal</h2>
-        <p>Controle emocional e autoconhecimento, Vamos te ajudar com dicas simples!</p>
-      </div>
+    <section class="card">
+        <img src="https://i.pinimg.com/736x/9f/ab/61/9fab6159d2288485434e359509b87348.jpg" alt="Estudo e desenvolvimento pessoal" />
+        <div class="text">
+            <h2>Personal Development</h2>
+            <p>Conselhos e dicas para autoaperfeiçoamento no dia a dia.</p>
+        </div>
     </section>
 
-    <section class="tip">
-      <img src="https://i.pinimg.com/736x/c4/5c/5e/c45c5e6c01bda5d710e8cb1ae5af469b.jpg" alt="Hair Care">
-      <div class="info">
-        <h2>Hair</h2>
-        <p>Não sabe por onde começar,nn tem tempo para uma rotina de cuidados ou nn sabe que penteado fazer com o cabelo,Vamos te ajudar com os cuidados e penteados!</p>
-      </div>
+    <section class="card">
+        <img src="https://i.pinimg.com/736x/75/0f/ae/750faed47596c9eed3458452074fd26e.jpg" alt="Cuidado com o cabelo" />
+        <div class="text">
+            <h2>Hair</h2>
+            <p>Cuidados e estilos para manter seu cabelo saudável e bonito.</p>
+        </div>
     </section>
   </main>
+
+  <!-- Rodapé -->
+  <footer>
+    <p>&copy; 2025 All Wear. Todos os direitos reservados.</p>
+  </footer>
 </body>
 </html>

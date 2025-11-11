@@ -1,33 +1,41 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../styles/styleclimam.css">
-    <script src = "../scripts/scriptclimaf.js"></script>
-    <title>Clima</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Style Weather</title>
+  <link rel="stylesheet" href="../styles/clima.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <script defer src="../scripts/clima.js"></script>
 </head>
-
 <body>
-    <div class="caixa-maior">
-        <input class="input-cidade" placeholder="Onde está?">
-        <button class="botao-busca" onclick="cliqueiNoBotao()">
-            <img class="img-busca" alt="busca" src="https://www.svgrepo.com/show/488200/find.svg">
-        </button>
 
-        <div class="caixa-media"></div>
-        <h2 class="cidade">Pevisão do tempo</h2>
-        <p class="temp">21º C</p>
+  <header>Style Weather</header>
+
+  <main>
+    <div class="caixa-maior">
+      <div class="busca">
+        <input class="input-cidade" placeholder="Digite sua cidade...">
+        <button class="botao-busca" onclick="cliqueiNoBotao()">
+          <img class="img-busca" alt="busca" src="https://www.svgrepo.com/show/488200/find.svg">
+        </button>
+      </div>
+
+      <div class="caixa-media">
+        <h2 class="cidade">Previsão do tempo</h2>
+        <p class="temp">-- ºC</p>
 
         <div class="caixa-menor">
-            <img class="img-previsao" alt="icone-info-tempo" src="https://openweathermap.org/img/wn/04n.png">
-            <p class="texto-previsao">Nublado</p>
+          <img class="img-previsao" alt="icone-info-tempo" src="clima2.png">
+          <p class="texto-previsao">--</p>
         </div>
-        <p class="unidade">Umidade: 76%</p>
 
+        <p class="umidade">Umidade: --%</p>
+        <p class="roupa"></p>
+      </div>
+    </div>
+  </main>
 </body>
-
 </html>

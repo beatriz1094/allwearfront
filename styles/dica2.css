@@ -1,4 +1,4 @@
-/* Reset básico */
+/* Reset */
 * {
   margin: 0;
   padding: 0;
@@ -7,77 +7,119 @@
 
 body {
   font-family: 'Georgia', serif;
-  background-color: #e8e6dd; /* Bege escuro suave */
-  color: #2e3d30; /* Verde militar escuro */
-  line-height: 1.6;
+  background: #243252;
+  color: #9fc1f5;
+  line-height: 1.7;
 }
 
-/* Cabeçalho */
-header {
-  background: linear-gradient(to right, #c1c6b2, #a6b198); /* verde militar pastel */
-  padding: 20px 0;
-  text-align: center;
-  border-bottom: 2px solid #6c715e;
-}
-
-header h1 {
-  font-size: 2rem;
-  color: #4b4e3f;
-  font-weight: bold;
-  margin-bottom: 10px;
-}
-
-nav ul {
-  list-style: none;
+/* Navbar */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: #223c66;
+  color: #9fbfe9;
   display: flex;
-  justify-content: center;
-  gap: 25px;
-  padding: 0;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+  z-index: 1000;
 }
 
-nav a {
-  text-decoration: none;
-  color: #4b4e3f;
+.navbar .logo {
+  font-size: 1.6rem;
   font-weight: bold;
+}
+
+.navbar ul {
+  display: flex;
+  gap: 20px;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: #b9c4f1;
+  font-weight: 600;
   transition: color 0.3s;
 }
 
-nav a:hover {
-  color: #2e3d30;
+.navbar a:hover {
+  color: #141e57;
 }
 
-/* Sessões de dicas */
-main {
-  padding: 40px 20px;
-  max-width: 1100px;
-  margin: 0 auto;
-}
-
-.tip {
+/* Hero */
+.hero {
+  background: url("https://i.pinimg.com/736x/48/9e/f5/489ef586b7d0b54fdfc0edca7b6f0b62.jpg") no-repeat center/cover;
+  height: 300px;
   display: flex;
+  justify-content: center;
   align-items: center;
-  margin-bottom: 50px;
+  margin-top: 70px; /* espaço por causa da navbar fixa */
+  color: #a5b4df;
+  text-align: center;
+}
+
+.hero-text h1 {
+  font-size: 2.8rem;
+  margin-bottom: 10px;
+}
+
+.hero-text p {
+  font-size: 1.2rem;
+  font-weight: 300;
+}
+
+/* Main (cards) */
+main {
+  max-width: 1200px;
+  margin: 50px auto;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 30px;
 }
 
-.tip img {
-  width: 30%;
-  border-radius: 8px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+.card {
+  background: #e5ecf5;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.tip .info {
-  flex: 1;
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.12);
 }
 
-.tip h2 {
-  color: #435444;
-  font-size: 1.8rem;
-  margin-bottom: 10px;
-  font-weight: 600;
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
 }
 
-.tip p {
+.card .text {
+  padding: 20px;
+}
+
+.card h2 {
+  color: #284166;
+  margin-bottom: 8px;
+  font-size: 1.4rem;
+}
+
+.card p {
+  color: #0a245c;
   font-size: 1rem;
-  color: #333;
+}
+
+/* Footer */
+footer {
+  background: #a6c6f0;
+  text-align: center;
+  padding: 20px;
+  font-size: 0.9rem;
+  color: #ffffff;
+  margin-top: 40px;
 }
