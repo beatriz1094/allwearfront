@@ -1,26 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ALL WEAR</title>
-    <link rel="stylesheet" href="../styles/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ALL WEAR</title>
+  <link rel="stylesheet" href="../styles/style.css">
 </head>
 <body>
 
-    <!-- Header -->
-    <header>
-        <div class="banner">
-          <img src="../assets/feminino.jpg" alt="Imagem 1">
-          <img src="../assets/img1.jpg" alt="Imagem 2">
-        </div>
-      </header>
+  <!-- Header -->
+  <header>
+    <div class="banner">
+      <img src="../assets/feminino.jpg" alt="Imagem 1">
+      <img src="../assets/img1.jpg" alt="Imagem 2">
+    </div>
+  </header>
+
   <div class="faixa">
-    <center> <h1>ALL WEAR</h1></center>
+    <center><h1>ALL WEAR</h1></center>
     <center><p>Este é um espaço onde você pode escolher sua combinação perfeita de roupa para seu dia.</p></center>
   </div>
 
-<section class="cards">
+<br><br>
+
+  <section class="cards">
     <div class="card">
       <center>
         <a href="verao.html">
@@ -42,30 +45,336 @@
         </div>
       </center>
     </div>
+  </section>
+
+   <!-- ===== GALERIA DE INSPIRAÇÕES ===== -->
+<section class="galeria">
+  <p>GALERIA DE INSPIRAÇÕES</p>
+  <div class="galeria-grid">
+    <!-- Cada imagem agora é um link para uma página local. Ajuste os hrefs conforme desejar. -->
+    <a href="look1.html">
+      <img src="https://i.pinimg.com/1200x/f1/15/41/f115412392bdf1e238f1a0e53aeacb71.jpg" alt="Look 1">
+    </a>
+    <a href="look2.html">
+      <img src="https://i.pinimg.com/1200x/9f/a4/77/9fa477a2ca718a54b1404278c01fffb7.jpg" alt="Look 2">
+    </a>
+    <a href="look3.html">
+      <img src="https://i.pinimg.com/1200x/cc/1d/3f/cc1d3fe131f131b7c957e870c222ddfe.jpg" alt="Look 3">
+    </a>
+    <a href="look4.html">
+      <img src="../assets/homemm.jpg" alt="Look 4">
+    </a>
+  </div>
 </section>
 
-   <div class="button">
-      <a href="cadastro.html">CADASTRE - SE</a>
-    </div>
-  </main>
+  <style>
 
-  <script>
-    function scrollCarousel(direction) {
-      const carousel = document.getElementById('carousel');
-      const cardWidth = carousel.querySelector('.card').offsetWidth + 32;
-      carousel.scrollBy({ left: direction * cardWidth, behavior: 'smooth' });
-    }
-  </script>
+/* ===== GALERIA ===== */
+.galeria {
+  text-align: center;
+  margin: 60px auto;
+  max-width: 900px;
+  padding: 20px;
+
+}
+.galeria p {
+  font-family: 'Helvetica Neue', sans-serif;
+  font-size: 30px;
+  margin-bottom: 20px;
+  color: #222d52;
+}
+.galeria-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+.galeria-grid img {
+  width: 140%;
+  /* altura fixa para todas as miniaturas - ajustável */
+  height: 530px;
+  /* garante que a imagem preencha o contêiner sem distorcer */
+  object-fit: cover;
+  display: block;
+  border-radius: 15px;
+  transition: transform 0.3s;
+}
+.galeria-grid img:hover {
+  transform: scale(1.05);
+}
+
+</style>
 
   <br>
 
-<script src="../assets/script.js"></script>
+  <style>
+    /* bloco de convite com mesmo fundo do footer */
+    .cta {
+      background: #000000; /* mesmo do footer */
+      color: #ffffff;
+      padding: 22px;
+      border-radius: 12px;
+      max-width: 700px;
+      margin: 0 auto 24px auto;
+      text-align: center;
+    }
+    .cta p { color: #f0efe9; }
+  </style>
 
-    <footer>
-        <p>&copy;ALL WEAR - Contatos: (19) 995252957 | @all_wear</p>
-        </p>
-    </footer>
-    </body>
-</html>
+  <section class="cta">
+    <h2>Junte-se a nós e descubra um mundo de estilo!</h2>
+    <p>Cadastre-se agora para receber atualizações exclusivas sobre nossas últimas coleções,</p>
+    <p>ofertas especiais e dicas de moda diretamente no seu e-mail. </p>
+    <p>Não perca a oportunidade de estar sempre à frente nas tendências e aproveitar benefícios exclusivos reservados para nossos membros.</p>
+    <p>Clique no botão abaixo para se cadastrar e começar sua jornada fashion conosco!</p>
+  </section>
+
+  <br>
+
+  <style>
+    /* ===== ESTILOS DA AVALIAÇÃO ===== */
+    .avaliacao {
+      text-align: right;
+      background: #fff;
+      margin: 40px auto;
+      padding: 30px;
+      border-radius: 20px;
+      box-shadow: 10 10px 15px rgb(235, 0, 0);
+      max-width: 600px;
+    }
+
+    .avaliacao h3 {
+      text-align: center;
+      color: #222;
+      margin-bottom: 10px;
+    }
+
+    .avaliacao p {
+      color: #555;
+      margin-bottom: 15px;
+      font-size: 15px;
+    }
+
+    .stars {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      margin: 15px 0;
+      cursor: pointer;
+    }
+
+    .star {
+      font-size: 40px;
+      color: #ccc;
+      transition: color 0.3s;
+    }
+
+    .star.active,
+    .star:hover,
+    .star:hover ~ .star {
+      color: #f5c518;
+    }
+
+    #rating-text {
+      font-weight: bold;
+      color: #333;
+      margin: 10px 0;
+    }
+
+    button#submit {
+      background-color: #f5c518;
+      border: none;
+      color: black;
+      font-weight: bold;
+      padding: 10px 25px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    button#submit:hover {
+      background-color: #ffd84d;
+    }
+
+    .media {
+      margin-top: 20px;
+      font-weight: bold;
+      color: #333;
+    }
+
+    .bar {
+      height: 8px;
+      background: #eee;
+      border-radius: 10px;
+      overflow: hidden;
+      margin-top: 5px;
+    }
+
+    .progress {
+      height: 8px;
+      background-color: #f5c518;
+      width: 0%;
+      transition: width 0.4s ease;
+    }
+
+    textarea {
+      width: 100%;
+      border-radius: 10px;
+      padding: 10px;
+      border: 1px solid #ccc;
+      resize: none;
+      font-size: 14px;
+    }
+
+    ul#lista-comentarios {
+      list-style: none;
+      padding: 0;
+      text-align: left;
+    }
+
+    ul#lista-comentarios li {
+      margin-bottom: 15px;
+      background: #f9f9f9;
+      padding: 10px 15px;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    }
+
+    
+  </style>
+
+    <div class="button">
+    <a href="cadastro.html">CADASTRE - SE</a>
+  </div>
+
+  <!-- ====== ÁREA DE AVALIAÇÃO ====== -->
+  <section class="avaliacao">
+    <h3>Deixe sua avaliação ⭐</h3>
+    <p>Sua opinião é muito importante para nós! Avalie o site da <b>ALL WEAR</b> e nos ajude a melhorar sua experiência.</p>
+
+    <div class="stars" id="stars">
+      <span class="star" data-value="1">★</span>
+      <span class="star" data-value="2">★</span>
+      <span class="star" data-value="3">★</span>
+      <span class="star" data-value="4">★</span>
+      <span class="star" data-value="5">★</span>
+    </div>
+
+    <p id="rating-text">Selecione uma nota</p>
+
+    <textarea id="comentario" rows="4" placeholder="Deixe seu comentário aqui..."></textarea>
+    <br><br>
+
+    <button id="submit">Enviar Avaliação</button>
+
+    <div class="media" id="media">Média atual: —</div>
+    <div class="bar"><div class="progress" id="progress"></div></div>
+
+    <div id="comentarios" style="margin-top: 25px; text-align: left;">
+      <h4>Comentários Recentes 💬</h4>
+      <ul id="lista-comentarios"></ul>
+    </div>
+  </section>
+
+  <script>
+    // ======== SCRIPT DA AVALIAÇÃO COM COMENTÁRIOS E DATA ========
+    const stars = document.querySelectorAll('.star');
+    const ratingText = document.getElementById('rating-text');
+    const submitButton = document.getElementById('submit');
+    const mediaDisplay = document.getElementById('media');
+    const progress = document.getElementById('progress');
+    const comentarioInput = document.getElementById('comentario');
+    const listaComentarios = document.getElementById('lista-comentarios');
+    let selectedRating = 0;
+
+    function carregarAvaliacoes() {
+      const avaliacoes = JSON.parse(localStorage.getItem('avaliacoesSite')) || [];
+      atualizarMedia(avaliacoes);
+      exibirComentarios(avaliacoes);
+    }
+
+    function atualizarMedia(avaliacoes) {
+      if (avaliacoes.length === 0) {
+        mediaDisplay.textContent = "Média atual: —";
+        progress.style.width = "0%";
+        return;
+      }
+
+      const soma = avaliacoes.reduce((acc, val) => acc + val.nota, 0);
+      const media = (soma / avaliacoes.length).toFixed(1);
+      mediaDisplay.textContent = `Média atual: ${media} ⭐ (${avaliacoes.length} avaliações)`;
+      progress.style.width = `${(media / 5) * 100}%`;
+    }
+
+    function exibirComentarios(avaliacoes) {
+      listaComentarios.innerHTML = "";
+      avaliacoes.slice(-5).reverse().forEach(av => {
+        const li = document.createElement('li');
+        li.innerHTML = `
+          <strong style="color:#f5c518;">${"★".repeat(av.nota)}${"☆".repeat(5 - av.nota)}</strong><br>
+          <em>${av.comentario || "(Sem comentário)"}</em><br>
+          <small style="color:#777;">🕒 Enviado em ${av.data}</small>
+        `;
+        listaComentarios.appendChild(li);
+      });
+    }
+
+    function obterDataAtual() {
+      const agora = new Date();
+      const data = agora.toLocaleDateString('pt-BR');
+      const hora = agora.toLocaleTimeString('pt-BR', { hour: '2-digit', minute: '2-digit' });
+      return `${data} às ${hora}`;
+    }
+
+    stars.forEach(star => {
+      star.addEventListener('click', () => {
+        selectedRating = parseInt(star.getAttribute('data-value'));
+        stars.forEach(s => s.classList.remove('active'));
+        for (let i = 0; i < selectedRating; i++) {
+          stars[i].classList.add('active');
+        }
+        ratingText.textContent = `Você deu ${selectedRating} estrela${selectedRating > 1 ? 's' : ''}!`;
+      });
+    });
+
+    submitButton.addEventListener('click', () => {
+      if (selectedRating === 0) {
+        alert('Por favor, selecione uma nota antes de enviar.');
+        return;
+      }
+
+      const comentario = comentarioInput.value.trim();
+      if (comentario.length < 3) {
+        alert('Por favor, escreva um comentário com pelo menos 3 caracteres.');
+        return;
+      }
+
+      const novaAvaliacao = {
+        nota: selectedRating,
+        comentario,
+        data: obterDataAtual()
+      };
+
+      let avaliacoes = JSON.parse(localStorage.getItem('avaliacoesSite')) || [];
+      avaliacoes.push(novaAvaliacao);
+      localStorage.setItem('avaliacoesSite', JSON.stringify(avaliacoes));
+
+      alert(`Obrigado pela sua avaliação de ${selectedRating} estrela${selectedRating > 1 ? 's' : ''}!`);
+
+      selectedRating = 0;
+      comentarioInput.value = "";
+      stars.forEach(s => s.classList.remove('active'));
+      ratingText.textContent = "Selecione uma nota";
+
+      atualizarMedia(avaliacoes);
+      exibirComentarios(avaliacoes);
+    });
+
+    carregarAvaliacoes();
+  </script>
+<br>
+  <footer>
+    <p>&copy; ALL WEAR - Contatos: (19) 99525-2957 | @all_wear</p>
+  </footer>
+
 </body>
 </html>

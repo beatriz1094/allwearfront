@@ -40,7 +40,7 @@
     padding: 10px 50px;
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
     font-weight: 300;
-    margin-top: -80px;
+    margin-top: -95px;
   }
   
   .faixa h1 {
@@ -86,7 +86,6 @@ H2{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 2rem;
     padding: 2rem;
   }
 
@@ -187,4 +186,42 @@ footer {
     padding: 1rem 0;
     bottom: 0;
     width: 100%;                                                                             
+}
+
+
+
+.categorias{
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(180px,1fr));
+  gap: 24px;
+  padding: 40px 10vw;
+  background: #f5e9d9; /* cor de fundo similar ao design */
+}
+
+.card{
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  color: #222;
+  text-align: center;
+  gap: 40px;
+  
+  transition: transform .25s ease;
+}
+
+.card img{
+  width: 100%;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+}
+
+.card span{
+  font-weight: 600;
+  letter-spacing: .010em;
+
+}
+
+.card:hover{
+  transform: translateY(-4px);
+
 }
