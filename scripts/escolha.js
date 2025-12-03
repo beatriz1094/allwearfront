@@ -21,6 +21,14 @@ async function exibirRoupas(filtro, nome) {
     img.src = roupa.imagemUrl;
     img.alt = roupa.nome;
     img.classList.add('image-option');
+    img.setAttribute('onclick',`addColecao("${roupa.id}","${roupa.nome}","${roupa.imagemUrl}")`);
     cards.appendChild(img);
   });
-} 
+}
+
+function addColecao(id, nome, imagemUrl) {
+  const colecao = JSON.parse(localStorage.getItem("colecao")) || [];
+  colecao.push({ id, nome, imagemUrl });
+  localStorage.setItem("colecao", JSON.stringify(colecao));
+  console.log(JSON.stringify(colecao));
+}
