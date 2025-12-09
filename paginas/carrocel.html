@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="../styles/escolha.css">
 </head>
 
-<body>
+<body onload="exibirRoupas()">
   <header>
     <center>
       <h1>Faça seu miss-match perfeito!</h1>
@@ -17,56 +17,34 @@
   </header>
   <br> <br>
   <div class="slider">
-    <div class="slide active">
-      <img src="https://via.placeholder.com/600x300?text=Slide+1">Slide 1
-    </div>
-    <div class="slide">
-      <img src="https://via.placeholder.com/600x300?text=Slide+2">Slide 2
-    </div>
-    <div class="slide">
-      <img src="https://via.placeholder.com/600x300?text=Slide+2">Slide 3
-    </div>
-    <div class="slide">
-      <img src="https://via.placeholder.com/600x300?text=Slide+2">Slide 4
-    </div>
-    <div class="slide">
-      <img src="https://via.placeholder.com/600x300?text=Slide+2">Slide 5
-    </div>
-    <div class="slide">
-      <img src="https://via.placeholder.com/600x300?text=Slide+2">Slide 6
-    </div>
-    <div class="slide">
-      <img src="https://via.placeholder.com/600x300?text=Slide+2">Slide 7
-    </div>
-    <div class="slide">
-      <img src="https://via.placeholder.com/600x300?text=Slide+3">Slide 8
-    </div>
-
-    <button class="prev"> &lt; </button>
-    <button class="next"> &gt; </button>
+    <img id="slide1" class="slide active">
+    <button onclick="contSlide[0]>0?contSlide[0]--:null;exibirRoupas()" class="prev"> &lt; </button>
+    <button onclick="contSlide[0]<roupas.length-1?contSlide[0]++:null;exibirRoupas()" class="next"> &gt; </button>
   </div>
-
-
+  <div class="slider">
+    <img id="slide2" class="slide active">
+    <button onclick="contSlide[1]>0?contSlide[1]--:null;exibirRoupas()" class="prev"> &lt; </button>
+    <button onclick="contSlide[1]<roupas.length-1?contSlide[1]++:null;exibirRoupas()" class="next"> &gt; </button>
+  </div>
+  <div class="slider">
+    <img id="slide3" class="slide active">
+    <button onclick="contSlide[2]>0?contSlide[2]--:null;exibirRoupas()" class="prev"> &lt; </button>
+    <button onclick="contSlide[2]<roupas.length-1?contSlide[2]++:null;exibirRoupas()" class="next"> &gt; </button>
+  </div>
 
 
   <button id="finalizarBtn">COMBINAR</button>
 
   <div id="mensagemMissmatch">Miss-match</div>
 
-
-
-
-
   <footer>
     <p>&copy; All Wear</p>
 
   </footer>
 
-
-
   </ul>
   </div>
-  <script src="../scripts/escolha.js"></script>
+  <script src="../scripts/carrocel.js"></script>
 </body>
 
 </html>

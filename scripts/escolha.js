@@ -32,3 +32,4 @@ function addColecao(id, nome, imagemUrl) {
   localStorage.setItem("colecao", JSON.stringify(colecao));
   console.log(JSON.stringify(colecao));
 }
+
