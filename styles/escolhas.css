@@ -5,41 +5,50 @@
 }
 
 body {
-  font-family: sans-serif;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  height: 100vh;
+  height: auto;
+  min-height: 100vh;
   margin: 0;
-  background: url('../assets/onça.png') no-repeat center center fixed;
+  background: linear-gradient(135deg, #f5ede2 0%, #eee5d9 50%, #e8dcc8 100%);
   background-size: cover;
+  background-attachment: fixed;
   flex-direction: column;
+  padding: 20px 10px;
 }
 
 header {
-  background: linear-gradient(to right, #000000, #d2b68a);
+  background: linear-gradient(135deg, #000000 0%, #000000 50%, #d2b68a 100%);
   color: #ffffff;
-  width: 100%;
-  padding: 20px 40px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: calc(100% + 20px);
+  padding: 12px 20px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
   display: flex;
   justify-content: space-between;
   box-sizing: border-box;
   text-align: center;
+  margin: -20px -10px 20px -10px;
 }
 
 header h1 {
   text-align: center;
   margin: 0;
-  font-size: 2rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
 }
 
 .container {
   max-width: 1200px;
   margin: 0 auto;
+  width: 100%;
+  height: auto;
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
   flex-wrap: wrap;
+  gap: 20px;
 }
 
 h2 {
@@ -47,22 +56,30 @@ h2 {
 }
 
 .slider {
-  position: sticky;
-  width: 300px;
-  height: 300px;
+  position: relative;
+  width: 240px;
+  height: 240px;
   overflow: hidden;
-  border: 3px solid #d2b68a;
+  border: 2px solid #d2b68a;
   background: #ffffff;
-  margin-bottom: 30px;
+  margin-bottom: 15px;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(210, 182, 138, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.slider:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(210, 182, 138, 0.3);
 }
 
 .slide {
   display: none;
-  width: 300px;
-  height: 300px;
+  width: 240px;
+  height: 240px;
   justify-content: center;
   align-items: center;
-  background-color: #ddd;
+  background-color: #f9f9f9;
 }
 
 .slide.active {
@@ -71,31 +88,71 @@ h2 {
 
 .prev,
 .next {
-  position: absolute;
-  bottom: 10px;
-  padding: 8px 12px;
+  position: fixed;
+  bottom: 80px;
+  padding: 10px 14px;
   background-color: #d2b68a;
   color: rgb(255, 255, 255);
   border: none;
   cursor: pointer;
+  border-radius: 6px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(210, 182, 138, 0.3);
+  z-index: 999;
+}
+
+.prev {
+  left: 20px;
+}
+
+.next {
+  right: 20px;
+}
+
+.prev:hover,
+.next:hover {
+  background-color: #c9a876;
+  transform: scale(1.05);
+  box-shadow: 0 6px 16px rgba(210, 182, 138, 0.4);
 }
 
 .bt {
-  padding: 8px 12px;
+  padding: 10px 14px;
   background-color: #d2b68a;
   color: rgb(255, 255, 255);
   border: none;
   cursor: pointer;
+  border-radius: 6px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(210, 182, 138, 0.3);
+}
+
+.bt:hover {
+  background-color: #c9a876;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(210, 182, 138, 0.4);
 }
 
 .image-option {
-  width: 300px;
-  height: 300px;
+  width: 240px;
+  height: 240px;
   justify-content: center;
   align-items: center;
-  background-color: #ddd;
-  margin: 10px;
+  background-color: #f9f9f9;
+  margin: 0;
   cursor: pointer;
+  border-radius: 10px;
+  border: 2px solid transparent;
+  box-shadow: 0 8px 24px rgba(210, 182, 138, 0.15);
+  transition: all 0.3s ease;
+}
+
+.image-option:hover {
+  border-color: #d2b68a;
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 12px 32px rgba(210, 182, 138, 0.3);
 }
 
 .prev {
@@ -126,23 +183,44 @@ h2 {
   position: absolute;
   top: 40px;
   right: 10px;
-  background: #fff;
-  border: 1px solid #d2b68a;
-  padding: 10px;
+  background: #ffffff;
+  border: 2px solid #d2b68a;
+  padding: 12px;
   z-index: 10;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  border-radius: 8px;
+  animation: slideIn 0.3s ease;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .opcoes-btn {
   position: absolute;
   top: 10px;
   right: 10px;
-  background: #d2b68a;
+  background: linear-gradient(135deg, #d2b68a 0%, #c9a876 100%);
   color: #fff;
   border: none;
-  padding: 8px 12px;
+  padding: 10px 14px;
   cursor: pointer;
-  border-radius: 4px;
+  border-radius: 6px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(210, 182, 138, 0.3);
+}
+
+.opcoes-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 16px rgba(210, 182, 138, 0.4);
 }
 
 #finalizarBtn {
@@ -150,14 +228,22 @@ h2 {
   bottom: 20px;
   left: 50%;
   transform: translateX(-50%);
-  padding: 15px 30px;
-  background-color: #363636;
+  padding: 15px 35px;
+  background: linear-gradient(135deg, #2c1810 0%, #5a4a3a 100%);
   color: rgb(255, 253, 253);
   border: none;
   border-radius: 8px;
   font-size: 16px;
+  font-weight: 600;
   cursor: pointer;
   z-index: 1000;
+  box-shadow: 0 8px 24px rgba(44, 24, 16, 0.3);
+  transition: all 0.3s ease;
+}
+
+#finalizarBtn:hover {
+  transform: translateX(-50%) translateY(-3px);
+  box-shadow: 0 12px 32px rgba(44, 24, 16, 0.4);
 }
 
 #mensagemMissmatch {
@@ -167,14 +253,21 @@ h2 {
   left: 50%;
   transform: translate(-50%, -50%);
   font-size: 48px;
-  color: #ff4d4d;
+  color: #ffffff;
   font-weight: bold;
-  background-color: rgba(255, 255, 255, 0.95);
+  background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
   padding: 30px 60px;
-  border-radius: 12px;
+  border-radius: 16px;
   z-index: 1001;
-  box-shadow: 0 0 15px rgba(226, 195, 137, 0.3);
+  box-shadow: 0 12px 40px rgba(231, 76, 60, 0.3);
   text-align: center;
+  animation: shake 0.5s ease;
+}
+
+@keyframes shake {
+  0%, 100% { transform: translate(-50%, -50%) rotate(0deg); }
+  25% { transform: translate(-50%, -50%) rotate(-2deg); }
+  75% { transform: translate(-50%, -50%) rotate(2deg); }
 }
 
 @media (max-width: 600px) {
@@ -271,3 +364,4 @@ h2 {
     font-size: 16px;
   }
 }
+

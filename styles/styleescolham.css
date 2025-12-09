@@ -37,7 +37,7 @@ img{
 }
 .lista{
     display: flex;
-    gap: 1.5em;
+    gap: 12.5em;
 }
 
 .item{
