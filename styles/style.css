@@ -1,57 +1,56 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  body {
-    margin: 0;
-    padding: 0;
-    background-color: #eee5d9;
-    overflow-x: hidden;
-    font-family: 'Helvetica Neue', sans-serif;
-  }
-  
-  header {
-    height: 50vh;
-    width: 100vw;
-    overflow: hidden;
-  }
-  
-  .banner {
-    display: flex;
-    height: 100%;
-    width: 100%;
-  }
-  
-  .banner img {
-    width: 50%;
-    height: 80%;
-    display: block;
-  }
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #eee5d9;
+  overflow-x: hidden;
+  font-family: 'Helvetica Neue', sans-serif;
+}
+
+header {
+  height: 50vh;
+  width: 100vw;
+  overflow: hidden;
+}
+
+.banner {
+  display: flex;
+  height: 100%;
+  width: 100%;
+}
+
+.banner img {
+  width: 50%;
+  height: 80%;
+  display: block;
+}
 
 /* header */
+.faixa {
+  width: 100%;
+  background-color: #000000;
+  color: #e8e4e0;
+  text-align: center;
+  padding: 10px 50px;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: 300;
+  margin-top: -95px;
+}
 
-  .faixa {
-    width: 100%;
-    background-color: #000000;
-    color: #e8e4e0;
-    text-align: center;
-    padding: 10px 50px;
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    font-weight: 300;
-    margin-top: -95px;
-  }
-  
-  .faixa h1 {
-    display: inline-block;
-    font-size: 1.7rem;
-    font-weight: normal;
-    letter-spacing: 3px;
-    color: white;
-    text-transform: uppercase;
-    animation: rotate-text 10s linear infinite;
-  }
+.faixa h1 {
+  display: inline-block;
+  font-size: 1.7rem;
+  font-weight: normal;
+  letter-spacing: 3px;
+  color: white;
+  text-transform: uppercase;
+  animation: rotate-text 10s linear infinite;
+}
 
 .button {
   margin-top: 0.5rem;
@@ -74,154 +73,185 @@
   background-color: #333a52;
 }
 
-.container{
-    MAX-WIDTH: 100PX;
-    MARGIN: 0 AUTO;
+.container {
+  max-width: 100%;
+  margin: 0 auto;
 }
-H2{
-    MARGIN-BOTTOM: 1REM;
+
+h2 {
+  margin-bottom: 1rem;
 }
 
 .cards {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    padding: 2rem;
-  }
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 2rem;
+}
 
-  
-  .card img.poster {
-    width: 60%;
-    border-radius: 15px;
-  }
-  
-  .card h2 {
-    font-size: 5rem;
-    margin: 1rem 0;
-  }
-  
-  .veja-mais {
-    text-decoration: none;
-    color: black;
-    font-weight: bold;
-  }
-  
-  .card:hover {
-    transform: scale(1.05);
-    box-shadow: #d5c5b0
-  }
+.card img.poster {
+  width: 60%;
+  border-radius: 15px;
+}
 
-  
+.card h2 {
+  font-size: 5rem;
+  margin: 1rem 0;
+}
+
+.veja-mais {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: #d5c5b0;
+}
+
 .modal {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background-color: var(--t2);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--t2);
 }
 
 .janela {
-    width: 40%;
-    height: fit-content;
-    background-color: var(--c4);
-    box-shadow: 0 0 5px var(--t1);
-    padding: 10px;
-    display: flex;
+  width: 40%;
+  height: fit-content;
+  background-color: var(--c4);
+  box-shadow: 0 0 5px var(--t1);
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.janela div {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.janela button {
+  width: fit-content;
+  background-color: var(--c3);
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  box-shadow: 0 0 5px var(--t2);
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.janela form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+input {
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  box-shadow: 0 0 5px var(--t2);
+  font-weight: bold;
+  width: 95%;
+}
+
+.oculto {
+  display: none;
+}
+
+@media screen and (max-width: 770px) {
+  .janela {
+    min-width: 90%;
+  }
+
+  .banner img {
+    width: 100%;
+    height: auto;
+  }
+
+  .faixa {
+    padding: 10px 20px;
+  }
+
+  .faixa h1 {
+    font-size: 1.5rem;
+  }
+
+  .button a {
+    font-size: 16px;
+    padding: 0.8rem 1.2rem;
+  }
+
+  .cards {
     flex-direction: column;
     align-items: center;
-    gap: 10px;
+  }
 
-    & div {
-        display: flex;
-        width: 100%;
-        justify-content: space-between;
-    }
+  .card img {
+    width: 100%;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+  }
 
-    & button {
-        width: fit-content;
-        background-color: var(--c3);
-        border: none;
-        padding: 5px 10px;
-        border-radius: 5px;
-        box-shadow: 0 0 5px var(--t2);
-        font-weight: bold;
-        cursor: pointer;
-    }
+  .card h2 {
+    font-size: 2.5rem;
+  }
 
-    & form {
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 10px;
-    }
-}
-
-input{
-    border: none;
-    padding: 5px 10px;
-    border-radius: 5px;
-    box-shadow: 0 0 5px var(--t2);
-    font-weight: bold;
-    width: 95%;
-}
-
-.oculto{
-    display: none;
-}
-
-@media screen and (max-width: 770px){
-    .janela{
-        min-width: 90%;
-    }
+  footer {
+    padding: 1rem;
+  }
 }
 
 footer {
-    background: #000000;
-    color: #fff;
-    text-align: center;
-    padding: 1rem 0;
-    bottom: 0;
-    width: 100%;                                                                             
+  background: #000000;
+  color: #fff;
+  text-align: center;
+  padding: 1rem 0;
+  bottom: 0;
+  width: 100%;
 }
 
-
-
-.categorias{
+.categorias {
   display: grid;
-  grid-template-columns: repeat(auto-fit,minmax(180px,1fr));
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
   gap: 24px;
   padding: 40px 10vw;
-  background: #f5e9d9; /* cor de fundo similar ao design */
+  background: #f5e9d9;
 }
 
-.card{
+.card {
   display: flex;
   flex-direction: column;
   text-decoration: none;
   color: #222;
   text-align: center;
   gap: 40px;
-  
   transition: transform .25s ease;
 }
 
-.card img{
+.card img {
   width: 100%;
   aspect-ratio: 1/1;
   object-fit: cover;
 }
 
-.card span{
+.card span {
   font-weight: 600;
   letter-spacing: .010em;
-
 }
 
-.card:hover{
+.card:hover {
   transform: translateY(-4px);
-
 }

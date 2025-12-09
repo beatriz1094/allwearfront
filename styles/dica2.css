@@ -1,4 +1,4 @@
-/* Reset */
+
 * {
   margin: 0;
   padding: 0;
@@ -12,7 +12,7 @@ body {
   line-height: 1.7;
 }
 
-/* Navbar */
+
 .navbar {
   position: fixed;
   top: 0;
@@ -48,7 +48,7 @@ body {
   color: #141e57;
 }
 
-/* Hero */
+
 .hero {
   background: url("https://i.pinimg.com/736x/48/9e/f5/489ef586b7d0b54fdfc0edca7b6f0b62.jpg") no-repeat center/cover;
   height: 300px;
@@ -70,7 +70,7 @@ body {
   font-weight: 300;
 }
 
-/* Main (cards) */
+
 main {
   max-width: 1200px;
   margin: 50px auto;
@@ -114,7 +114,7 @@ main {
   font-size: 1rem;
 }
 
-/* Footer */
+
 footer {
   background: #a6c6f0;
   text-align: center;
@@ -122,4 +122,155 @@ footer {
   font-size: 0.9rem;
   color: #ffffff;
   margin-top: 40px;
+}
+
+/* ============================= */
+/*         RESPONSIVIDADE        */
+/* ============================= */
+
+
+@media (max-width: 480px) {
+
+  .navbar {
+    padding: 15px;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .navbar .logo {
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+  }
+
+  .navbar ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+ 
+  .hero {
+    height: 250px;
+    margin-top: 50px;
+  }
+
+  .hero-text h1 {
+    font-size: 2.2rem;
+  }
+
+  .hero-text p {
+    font-size: 1rem;
+  }
+
+
+  main {
+    margin: 30px auto;
+    padding: 15px;
+  }
+
+ 
+  .card {
+    margin-bottom: 20px;
+  }
+
+  .card h2 {
+    font-size: 1.2rem;
+  }
+
+  .card p {
+    font-size: 0.9rem;
+  }
+
+  footer {
+    font-size: 0.8rem;
+    padding: 15px;
+  }
+}
+
+
+@media (max-width: 768px) {
+
+  .navbar {
+    padding: 20px;
+  }
+
+  .navbar .logo {
+    font-size: 1.6rem;
+  }
+
+
+  .hero {
+    height: 280px;
+    margin-top: 60px;
+  }
+
+  .hero-text h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero-text p {
+    font-size: 1.1rem;
+  }
+
+
+  main {
+    margin: 40px auto;
+  }
+
+
+  .card h2 {
+    font-size: 1.3rem;
+  }
+
+  .card p {
+    font-size: 1rem;
+  }
+
+  footer {
+    font-size: 0.85rem;
+  }
+}
+
+
+@media (min-width: 1200px) {
+  
+  .navbar {
+    padding: 15px 40px;
+  }
+
+  .navbar .logo {
+    font-size: 1.8rem;
+  }
+
+
+  .hero {
+    height: 350px;
+  }
+
+  .hero-text h1 {
+    font-size: 3rem;
+  }
+
+  .hero-text p {
+    font-size: 1.3rem;
+  }
+
+ 
+  main {
+    margin: 60px auto;
+    padding: 40px;
+  }
+
+ 
+  .card h2 {
+    font-size: 1.5rem;
+  }
+
+  .card p {
+    font-size: 1.1rem;
+  }
+
+  footer {
+    font-size: 1rem;
+    padding: 25px;
+  }
 }

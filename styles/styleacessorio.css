@@ -112,3 +112,66 @@ h2 {
 .shop-button button:hover {
   background-color: #b89c7a;
 }
+
+@media screen and (max-width: 768px) {
+  .main-header {
+    padding: 15px 20px;
+  }
+
+  .logo {
+    font-size: 20px;
+  }
+
+  .nav-links a {
+    font-size: 14px;
+    margin-left: 15px;
+  }
+
+  .hero-image img {
+    max-width: 100%;
+  }
+
+  .cards {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .card {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .shop-button button {
+    width: 100%;
+    padding: 14px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .main-header {
+    padding: 10px 15px;
+  }
+
+  .logo {
+    font-size: 18px;
+  }
+
+  .nav-links a {
+    font-size: 12px;
+    margin-left: 10px;
+  }
+
+  .cards {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .card {
+    width: 90%;
+  }
+
+  .shop-button button {
+    padding: 12px;
+    font-size: 14px;
+  }
+}
